@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: customers
+    description: One row per customer with order history and lifetime value.
+    columns:
+      - name: customer_id
+        description: Customer id from raw_customers.
+        data_tests: [unique, not_null]
+      - name: first_name
+        description: Customer first name.
+        data_tests: [not_null]
+      - name: last_name
+        description: Customer last name (initial).
+        data_tests: [not_null]
+      - name: first_order
+        description: Date of the customer's first order. Null if the customer has no orders.
+      - name: most_recent_order
+        description: Date of the customer's most recent order. Null if the customer has no orders.
+      - name: number_of_orders
+        description: Number of orders. 0 if the customer has no orders.
+        data_tests: [not_null]
+      - name: customer_lifetime_value
+        description: Sum of all payments on all the customer's orders, every order status included. In dollars.
+        data_tests: [not_null]

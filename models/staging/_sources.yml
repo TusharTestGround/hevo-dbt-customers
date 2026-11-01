@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: hevo_raw
+    description: Raw tables replicated from PostgreSQL to Snowflake by Hevo (Logical Replication).
+    database: "{{ env_var('DBT_SOURCE_DATABASE') }}"
+    schema: "{{ env_var('DBT_SOURCE_SCHEMA') }}"
+    tables:
+      - name: raw_customers
+      - name: raw_orders
+      - name: raw_payments
