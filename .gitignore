@@ -1,0 +1,10 @@
+target/
+dbt_packages/
+logs/
+.user.yml
+.env
+*.env
+profiles.yml
+*.p8
+*.pem
+.DS_Store
