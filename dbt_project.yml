@@ -1,0 +1,26 @@
+name: 'hevo_customers'
+version: '1.0.0'
+profile: 'hevo_customers'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  hevo_customers:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+
+vars:
+  # Hevo's soft-delete column on the raw tables. Rows deleted in Postgres arrive with this flag set to true.
+  # Set to 'none' if the raw tables have no such column.
+  hevo_deleted_flag: '__hevo__marked_deleted'
