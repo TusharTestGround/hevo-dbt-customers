@@ -8,7 +8,7 @@ CSV files -> PostgreSQL 16 (Docker on AWS EC2) -> Hevo (Logical Replication) -> 
 
 No credentials, hosts, account names or keys are stored in this repository. Every value comes from environment variables or from files outside the project.
 
-Demo video: [https://www.loom.com/share/7ea725c9c7c44062a2b5cbe729c871e3]
+Demo video: (https://www.loom.com/share/7ea725c9c7c44062a2b5cbe729c871e3)
 
 ## Repository layout
 
