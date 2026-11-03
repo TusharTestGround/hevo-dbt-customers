@@ -61,7 +61,7 @@ PostgreSQL runs on an AWS EC2 VM with an Elastic IP. The security group allows p
 
 ![First run: 312 events ingested and loaded](docs/hevo_pipeline_run.png)
 
-Note: the Hevo trial was started from Snowflake Partner Connect and uses the Partner Connect objects. Hevo's sign-up did not accept the first email domain, so the Snowflake destination was linked in Hevo by hand, with key-pair authentication on the Partner Connect user.
+Note: the Hevo trial was started from Snowflake Partner Connect and uses the Partner Connect objects. Hevo's sign-up did not accept the first email domain, and the Partner Connect destination did not attach, so the Snowflake destination was linked in Hevo by hand, with key-pair authentication on the Partner Connect user.
 
 ## 4. Snowflake objects for dbt
 
